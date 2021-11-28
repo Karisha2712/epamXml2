@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/greenhouse"
+        xmlns:gh="http://www.example.com/greenhouse" elementFormDefault="qualified">
+
+    <element name='flowers'>
+        <complexType>
+            <sequence>
+                <element name='plant' type='gh:Plant' minOccurs='0' maxOccurs='unbounded'/>
+            </sequence>
+        </complexType>
+    </element>
+
+    <complexType name="Plant">
+        <sequence>
+            <element name="name" type="string"/>
+            <element name="planting-date" type="dateTime"/>
+            <element name="soil" type="gh:Soil"/>
+            <element name="origin" type="gh:Country"/>
+            <element name="visual-parameters" type="gh:VisualParameters"/>
+            <element name="growing-tips" type="gh:GrowingTips"/>
+            <element name="multiplying" type="gh:Multiplying"/>
+        </sequence>
+        <attribute name="id" type="ID" use="required"/>
+        <attribute name="family" type="string" use="optional" default=""/>
+    </complexType>
+
+    <simpleType name="Soil">
+        <restriction base="string">
+            <enumeration value="loamy"/>
+            <enumeration value="podzolic"/>
+            <enumeration value="ground"/>
+            <enumeration value="sod-podzolic"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Country">
+        <restriction base="string">
+            <enumeration value="Italy"/>
+            <enumeration value="Spain"/>
+            <enumeration value="USA"/>
+            <enumeration value="Canada"/>
+            <enumeration value="Russia"/>
+            <enumeration value="China"/>
+            <enumeration value="Japan"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="VisualParameters">
+        <sequence>
+            <element name="stem-color" type="gh:Color"/>
+            <element name="flower-color" type="gh:Color"/>
+            <element name="medium-size" type="positiveInteger"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Color">
+        <restriction base="string">
+            <enumeration value="green"/>
+            <enumeration value="red"/>
+            <enumeration value="yellow"/>
+            <enumeration value="white"/>
+            <enumeration value="pink"/>
+            <enumeration value="purple"/>
+            <enumeration value="orange"/>
+            <enumeration value="multicolor"/>
+        </restriction>
+    </simpleType>
+
+    <complexType name="GrowingTips">
+        <sequence>
+            <element name="temperature" type="positiveInteger"/>
+            <element name="humidity" type="positiveInteger"/>
+            <element name="watering" type="positiveInteger"/>
+        </sequence>
+    </complexType>
+
+    <simpleType name="Multiplying">
+        <restriction base="string">
+            <enumeration value="cuttings"/>
+            <enumeration value="bulbs"/>
+            <enumeration value="seeds"/>
+            <enumeration value="roots"/>
+        </restriction>
+    </simpleType>
+
+</schema>

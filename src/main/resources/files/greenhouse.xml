@@ -1,6 +1,9 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <flowers>
-    <plant name="rose">
+
+    <plant id="12">
+        <name>rose</name>
+        <planting-date>12.06.2020</planting-date>
         <soil>loamy</soil>
         <origin>Italy</origin>
         <visual-parameters>
@@ -15,7 +18,10 @@
         </growing-tips>
         <multiplying>cuttings</multiplying>
     </plant>
-    <plant name="tulip">
+
+    <plant id="11" family="lilac">
+        <name>tulip</name>
+        <planting-date>12.06.2020</planting-date>
         <soil>podzolic</soil>
         <origin>Spain</origin>
         <visual-parameters>
@@ -30,4 +36,5 @@
         </growing-tips>
         <multiplying>bulbs</multiplying>
     </plant>
+
 </flowers>
