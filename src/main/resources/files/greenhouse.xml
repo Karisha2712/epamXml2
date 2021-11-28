@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<flowers>
+    <plant name="rose">
+        <soil>loamy</soil>
+        <origin>Italy</origin>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <flower-color>red</flower-color>
+            <medium-size>30</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>22</temperature>
+            <humidity>70</humidity>
+            <watering>30</watering>
+        </growing-tips>
+        <multiplying>cuttings</multiplying>
+    </plant>
+    <plant name="tulip">
+        <soil>podzolic</soil>
+        <origin>Spain</origin>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <flower-color>yellow</flower-color>
+            <medium-size>15</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>24</temperature>
+            <humidity>70</humidity>
+            <watering>20</watering>
+        </growing-tips>
+        <multiplying>bulbs</multiplying>
+    </plant>
+</flowers>
