@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/greenhouse"
-        xmlns:gh="http://www.example.com/greenhouse" elementFormDefault="qualified">
+        xmlns:tns="http://www.example.com/greenhouse" elementFormDefault="qualified">
 
-    <element name='flowers'>
-        <complexType>
-            <sequence>
-                <element name='plant' type='gh:Plant' minOccurs='0' maxOccurs='unbounded'/>
-            </sequence>
-        </complexType>
-    </element>
+    <element name="flowers" type="tns:Flowers"/>
+
+    <complexType name='Flowers'>
+        <sequence>
+            <element name='plant' type='tns:Plant' minOccurs='0' maxOccurs='unbounded'/>
+        </sequence>
+    </complexType>
 
     <complexType name="Plant">
         <sequence>
             <element name="name" type="string"/>
             <element name="planting-date" type="dateTime"/>
-            <element name="soil" type="gh:Soil"/>
-            <element name="origin" type="gh:Country"/>
-            <element name="visual-parameters" type="gh:VisualParameters"/>
-            <element name="growing-tips" type="gh:GrowingTips"/>
-            <element name="multiplying" type="gh:Multiplying"/>
+            <element name="soil" type="tns:Soil"/>
+            <element name="origin" type="tns:Country"/>
+            <element name="visual-parameters" type="tns:VisualParameters"/>
+            <element name="growing-tips" type="tns:GrowingTips"/>
+            <element name="multiplying" type="tns:Multiplying"/>
         </sequence>
         <attribute name="id" type="ID" use="required"/>
         <attribute name="family" type="string" use="optional" default=""/>
@@ -47,8 +47,8 @@
 
     <complexType name="VisualParameters">
         <sequence>
-            <element name="stem-color" type="gh:Color"/>
-            <element name="flower-color" type="gh:Color"/>
+            <element name="stem-color" type="tns:Color"/>
+            <element name="flower-color" type="tns:Color"/>
             <element name="medium-size" type="positiveInteger"/>
         </sequence>
     </complexType>

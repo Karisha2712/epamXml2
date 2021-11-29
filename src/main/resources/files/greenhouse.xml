@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flowers>
 
-    <plant id="12">
+    <plant id="id1">
         <name>rose</name>
-        <planting-date>12.06.2020</planting-date>
+        <planting-date>2001-12-03T06:00:00</planting-date>
         <soil>loamy</soil>
         <origin>Italy</origin>
         <visual-parameters>
@@ -19,9 +19,9 @@
         <multiplying>cuttings</multiplying>
     </plant>
 
-    <plant id="11" family="lilac">
+    <plant id="id2" family="lilac">
         <name>tulip</name>
-        <planting-date>12.06.2020</planting-date>
+        <planting-date>2001-12-03T06:00:00</planting-date>
         <soil>podzolic</soil>
         <origin>Spain</origin>
         <visual-parameters>
