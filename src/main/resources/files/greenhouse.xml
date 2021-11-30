@@ -25,7 +25,7 @@
     <tree id="id2">
         <name>apple tree</name>
         <planting-date>2010-10-13T06:00:00</planting-date>
-        <soil>sod-podzolic</soil>
+        <soil>podzolic</soil>
         <origin>Russia</origin>
         <visual-parameters>
             <stem-color>brown</stem-color>
@@ -44,7 +44,7 @@
     <tree id="id3">
         <name>plum tree</name>
         <planting-date>2007-04-18T06:00:00</planting-date>
-        <soil>sod-podzolic</soil>
+        <soil>podzolic</soil>
         <origin>Russia</origin>
         <visual-parameters>
             <stem-color>brown</stem-color>
@@ -63,7 +63,7 @@
     <tree id="id4" picture="cherry.png">
         <name>cherry tree</name>
         <planting-date>2000-11-07T06:00:00</planting-date>
-        <soil>sod-podzolic</soil>
+        <soil>podzolic</soil>
         <origin>USA</origin>
         <visual-parameters>
             <stem-color>brown</stem-color>
@@ -101,7 +101,7 @@
     <bush id="id6">
         <name>thuja</name>
         <planting-date>2018-05-04T06:00:00</planting-date>
-        <soil>sod-podzolic</soil>
+        <soil>podzolic</soil>
         <origin>USA</origin>
         <visual-parameters>
             <stem-color>brown</stem-color>
@@ -136,7 +136,7 @@
         <need-for-pruning>false</need-for-pruning>
     </bush>
 
-    <bush id="id8">
+    <bush id="id8" picture="hydrangea.png">
         <name>hydrangea</name>
         <planting-date>2005-02-14T06:00:00</planting-date>
         <soil>peat</soil>
@@ -158,7 +158,7 @@
     <bush id="id9">
         <name>spirea</name>
         <planting-date>2020-08-30T06:00:00</planting-date>
-        <soil>sod-podzolic</soil>
+        <soil>peat</soil>
         <origin>Australia</origin>
         <visual-parameters>
             <stem-color>green</stem-color>
@@ -193,10 +193,10 @@
         <need-for-pruning>true</need-for-pruning>
     </bush>
 
-    <grass id="id11">
+    <grass id="id11" picture="rose.png">
         <name>rose</name>
         <planting-date>2020-08-31T06:00:00</planting-date>
-        <soil>sod-podzolic</soil>
+        <soil>podzolic</soil>
         <origin>Australia</origin>
         <visual-parameters>
             <stem-color>green</stem-color>
@@ -231,7 +231,7 @@
         <flower-presence>true</flower-presence>
     </grass>
 
-    <grass id="id13">
+    <grass id="id13" picture="pion.png">
         <name>pion</name>
         <planting-date>2013-10-28T06:00:00</planting-date>
         <soil>peat</soil>
@@ -250,10 +250,10 @@
         <flower-presence>true</flower-presence>
     </grass>
 
-    <grass id="id14">
+    <grass id="id14" picture="pansy.png">
         <name>pansy</name>
         <planting-date>2004-07-11T06:00:00</planting-date>
-        <soil>sod-podzolic</soil>
+        <soil>peat</soil>
         <origin>Russia</origin>
         <visual-parameters>
             <stem-color>green</stem-color>

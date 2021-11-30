@@ -79,7 +79,6 @@
             <enumeration value="peat"/>
             <enumeration value="podzolic"/>
             <enumeration value="ground"/>
-            <enumeration value="sod-podzolic"/>
         </restriction>
     </simpleType>
 
@@ -104,11 +103,7 @@
     <simpleType name="Color">
         <restriction base="string">
             <enumeration value="green"/>
-            <enumeration value="red"/>
-            <enumeration value="yellow"/>
             <enumeration value="brown"/>
-            <enumeration value="orange"/>
-            <enumeration value="multicolor"/>
         </restriction>
     </simpleType>
 
