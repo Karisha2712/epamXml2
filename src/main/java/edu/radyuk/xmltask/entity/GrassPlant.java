@@ -7,16 +7,16 @@ import edu.radyuk.xmltask.entity.type.Soil;
 
 import java.time.LocalDateTime;
 
-public class Grass extends Plant {
+public class GrassPlant extends Plant {
     private boolean isFlowerPresent;
 
-    public Grass() {
+    public GrassPlant() {
     }
 
-    public Grass(String plantId, String name, LocalDateTime plantingDate,
-                 Soil soil, Country country, Color leafColor,
-                 Color stemColor, int mediumSize, int temperature,
-                 int humidity, int watering, Multiplying multiplying, boolean isFruitPresent) {
+    public GrassPlant(String plantId, String name, LocalDateTime plantingDate,
+                      Soil soil, Country country, Color leafColor,
+                      Color stemColor, int mediumSize, int temperature,
+                      int humidity, int watering, Multiplying multiplying, boolean isFruitPresent) {
 
         super(plantId, name, plantingDate, soil, country, leafColor, stemColor,
                 mediumSize, temperature, humidity, watering, multiplying);
@@ -36,7 +36,7 @@ public class Grass extends Plant {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Grass grass = (Grass) o;
+        GrassPlant grass = (GrassPlant) o;
         return isFlowerPresent == grass.isFlowerPresent;
     }
 

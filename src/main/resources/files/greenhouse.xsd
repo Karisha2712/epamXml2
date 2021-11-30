@@ -39,7 +39,7 @@
         </complexContent>
     </complexType>
 
-    <complexType name="Bush">
+    <complexType name="BushPlant">
         <complexContent>
             <extension base="gh:Plant">
                 <sequence>
@@ -49,7 +49,7 @@
         </complexContent>
     </complexType>
 
-    <complexType name="Grass">
+    <complexType name="GrassPlant">
         <complexContent>
             <extension base="gh:Plant">
                 <sequence>

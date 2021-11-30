@@ -7,16 +7,16 @@ import edu.radyuk.xmltask.entity.type.Soil;
 
 import java.time.LocalDateTime;
 
-public class Tree extends Plant {
+public class TreePlant extends Plant {
     private boolean isFruitPresent;
 
-    public Tree() {
+    public TreePlant() {
     }
 
-    public Tree(String plantId, String name, LocalDateTime plantingDate,
-                Soil soil, Country country, Color leafColor,
-                Color stemColor, int mediumSize, int temperature,
-                int humidity, int watering, Multiplying multiplying, boolean fruitPresent) {
+    public TreePlant(String plantId, String name, LocalDateTime plantingDate,
+                     Soil soil, Country country, Color leafColor,
+                     Color stemColor, int mediumSize, int temperature,
+                     int humidity, int watering, Multiplying multiplying, boolean fruitPresent) {
 
         super(plantId, name, plantingDate, soil, country, leafColor, stemColor,
                 mediumSize, temperature, humidity, watering, multiplying);
@@ -36,7 +36,7 @@ public class Tree extends Plant {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Tree tree = (Tree) o;
+        TreePlant tree = (TreePlant) o;
         return isFruitPresent == tree.isFruitPresent;
     }
 

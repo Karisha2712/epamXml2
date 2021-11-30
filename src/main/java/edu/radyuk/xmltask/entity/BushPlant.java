@@ -7,16 +7,16 @@ import edu.radyuk.xmltask.entity.type.Soil;
 
 import java.time.LocalDateTime;
 
-public class Bush extends Plant {
+public class BushPlant extends Plant {
     private boolean isSubjectedToPruning;
 
-    public Bush() {
+    public BushPlant() {
     }
 
-    public Bush(String plantId, String name, LocalDateTime plantingDate,
-                Soil soil, Country country, Color leafColor,
-                Color stemColor, int mediumSize, int temperature,
-                int humidity, int watering, Multiplying multiplying, boolean subjectedToPruning) {
+    public BushPlant(String plantId, String name, LocalDateTime plantingDate,
+                     Soil soil, Country country, Color leafColor,
+                     Color stemColor, int mediumSize, int temperature,
+                     int humidity, int watering, Multiplying multiplying, boolean subjectedToPruning) {
 
         super(plantId, name, plantingDate, soil, country, leafColor, stemColor,
                 mediumSize, temperature, humidity, watering, multiplying);
@@ -36,7 +36,7 @@ public class Bush extends Plant {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        Bush bush = (Bush) o;
+        BushPlant bush = (BushPlant) o;
         return isSubjectedToPruning == bush.isSubjectedToPruning;
     }
 
