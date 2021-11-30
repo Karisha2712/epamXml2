@@ -8,7 +8,7 @@ import edu.radyuk.xmltask.entity.type.Soil;
 import java.time.LocalDateTime;
 
 public abstract class Plant {
-    private static final String DEFAULT_PICTURE = "1.png";
+    public static final String DEFAULT_PICTURE = "1.png";
     private String plantId;
     private String picture;
     private String name;
@@ -23,6 +23,26 @@ public abstract class Plant {
     private int watering;
     private Multiplying multiplying;
 
+    public Plant() {
+    }
+
+    public Plant(String plantId, String name, LocalDateTime plantingDate,
+                 Soil soil, Country country, Color leafColor,
+                 Color stemColor, int mediumSize, int temperature,
+                 int humidity, int watering, Multiplying multiplying) {
+        this.plantId = plantId;
+        this.name = name;
+        this.plantingDate = plantingDate;
+        this.soil = soil;
+        this.country = country;
+        this.leafColor = leafColor;
+        this.stemColor = stemColor;
+        this.mediumSize = mediumSize;
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.watering = watering;
+        this.multiplying = multiplying;
+    }
 
     public String getPlantId() {
         return plantId;
