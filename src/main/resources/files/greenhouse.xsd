@@ -1,32 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.com/greenhouse"
-        xmlns:tns="http://www.example.com/greenhouse" elementFormDefault="qualified">
+        xmlns:gh="http://www.example.com/greenhouse" elementFormDefault="qualified">
 
-    <element name="flowers" type="tns:Flowers"/>
+    <element name="flowers" type="gh:Flowers"/>
+
+    <element name="plant" type="gh:Plant" abstract="true"/>
+    <element name="tree" type="gh:Tree" substitutionGroup="gh:plant"/>
+    <element name="bush" type="gh:Bush" substitutionGroup="gh:plant"/>
+    <element name="grass" type="gh:Grass" substitutionGroup="gh:plant"/>
 
     <complexType name='Flowers'>
         <sequence>
-            <element name='plant' type='tns:Plant' minOccurs='0' maxOccurs='unbounded'/>
+            <element ref='gh:plant' minOccurs='0' maxOccurs='unbounded'/>
         </sequence>
     </complexType>
 
     <complexType name="Plant">
         <sequence>
-            <element name="name" type="string"/>
+            <element name="name" type="gh:PlantName"/>
             <element name="planting-date" type="dateTime"/>
-            <element name="soil" type="tns:Soil"/>
-            <element name="origin" type="tns:Country"/>
-            <element name="visual-parameters" type="tns:VisualParameters"/>
-            <element name="growing-tips" type="tns:GrowingTips"/>
-            <element name="multiplying" type="tns:Multiplying"/>
+            <element name="soil" type="gh:Soil"/>
+            <element name="origin" type="gh:Country"/>
+            <element name="visual-parameters" type="gh:VisualParameters"/>
+            <element name="growing-tips" type="gh:GrowingTips"/>
+            <element name="multiplying" type="gh:Multiplying"/>
         </sequence>
         <attribute name="id" type="ID" use="required"/>
-        <attribute name="family" type="string" use="optional" default=""/>
+        <attribute name="picture" type="gh:FileName" use="optional" default="1.png"/>
     </complexType>
+
+    <complexType name="Tree">
+        <complexContent>
+            <extension base="gh:Plant">
+                <sequence>
+                    <element name="fruit-presence" type="boolean"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Bush">
+        <complexContent>
+            <extension base="gh:Plant">
+                <sequence>
+                    <element name="need-for-pruning" type="boolean"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <complexType name="Grass">
+        <complexContent>
+            <extension base="gh:Plant">
+                <sequence>
+                    <element name="flower-presence" type="boolean"/>
+                </sequence>
+            </extension>
+        </complexContent>
+    </complexType>
+
+    <simpleType name="FileName">
+        <restriction base="string">
+            <pattern value="[^\s]+\.(jpg|png)"/>
+            <minLength value="5"/>
+            <maxLength value="30"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="PlantName">
+        <restriction base="string">
+            <minLength value="3"/>
+            <maxLength value="30"/>
+        </restriction>
+    </simpleType>
 
     <simpleType name="Soil">
         <restriction base="string">
-            <enumeration value="loamy"/>
+            <enumeration value="peat"/>
             <enumeration value="podzolic"/>
             <enumeration value="ground"/>
             <enumeration value="sod-podzolic"/>
@@ -36,20 +86,18 @@
     <simpleType name="Country">
         <restriction base="string">
             <enumeration value="Italy"/>
-            <enumeration value="Spain"/>
             <enumeration value="USA"/>
             <enumeration value="Canada"/>
             <enumeration value="Russia"/>
-            <enumeration value="China"/>
-            <enumeration value="Japan"/>
+            <enumeration value="Australia"/>
         </restriction>
     </simpleType>
 
     <complexType name="VisualParameters">
         <sequence>
-            <element name="stem-color" type="tns:Color"/>
-            <element name="flower-color" type="tns:Color"/>
-            <element name="medium-size" type="positiveInteger"/>
+            <element name="stem-color" type="gh:Color"/>
+            <element name="leaf-color" type="gh:Color"/>
+            <element name="medium-size" type="gh:PositiveDigit"/>
         </sequence>
     </complexType>
 
@@ -58,9 +106,7 @@
             <enumeration value="green"/>
             <enumeration value="red"/>
             <enumeration value="yellow"/>
-            <enumeration value="white"/>
-            <enumeration value="pink"/>
-            <enumeration value="purple"/>
+            <enumeration value="brown"/>
             <enumeration value="orange"/>
             <enumeration value="multicolor"/>
         </restriction>
@@ -68,18 +114,31 @@
 
     <complexType name="GrowingTips">
         <sequence>
-            <element name="temperature" type="positiveInteger"/>
-            <element name="humidity" type="positiveInteger"/>
-            <element name="watering" type="positiveInteger"/>
+            <element name="temperature" type="gh:PositiveDigit"/>
+            <element name="humidity" type="gh:Percent"/>
+            <element name="watering" type="gh:PositiveDigit"/>
         </sequence>
     </complexType>
 
     <simpleType name="Multiplying">
         <restriction base="string">
-            <enumeration value="cuttings"/>
-            <enumeration value="bulbs"/>
-            <enumeration value="seeds"/>
-            <enumeration value="roots"/>
+            <enumeration value="cutting"/>
+            <enumeration value="bulb"/>
+            <enumeration value="seed"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="PositiveDigit">
+        <restriction base="positiveInteger">
+            <minInclusive value="1"/>
+            <maxInclusive value="1000"/>
+        </restriction>
+    </simpleType>
+
+    <simpleType name="Percent">
+        <restriction base="positiveInteger">
+            <minInclusive value="1"/>
+            <maxInclusive value="100"/>
         </restriction>
     </simpleType>
 
