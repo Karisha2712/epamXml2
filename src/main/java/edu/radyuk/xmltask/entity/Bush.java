@@ -16,11 +16,11 @@ public class Bush extends Plant {
     public Bush(String plantId, String name, LocalDateTime plantingDate,
                 Soil soil, Country country, Color leafColor,
                 Color stemColor, int mediumSize, int temperature,
-                int humidity, int watering, Multiplying multiplying, boolean isFruitPresent) {
+                int humidity, int watering, Multiplying multiplying, boolean subjectedToPruning) {
 
         super(plantId, name, plantingDate, soil, country, leafColor, stemColor,
                 mediumSize, temperature, humidity, watering, multiplying);
-        this.isSubjectedToPruning = isFruitPresent;
+        isSubjectedToPruning = subjectedToPruning;
     }
 
     public boolean isSubjectedToPruning() {
@@ -47,9 +47,9 @@ public class Bush extends Plant {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("Tree{");
+        final StringBuilder sb = new StringBuilder("Bush{");
         sb.append(super.toString());
-        sb.append("isFruitPresent=").append(isSubjectedToPruning);
+        sb.append("isSubjectedToPruning=").append(isSubjectedToPruning);
         sb.append('}');
         return sb.toString();
     }

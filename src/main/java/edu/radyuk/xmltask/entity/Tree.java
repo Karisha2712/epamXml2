@@ -16,11 +16,11 @@ public class Tree extends Plant {
     public Tree(String plantId, String name, LocalDateTime plantingDate,
                 Soil soil, Country country, Color leafColor,
                 Color stemColor, int mediumSize, int temperature,
-                int humidity, int watering, Multiplying multiplying, boolean isFruitPresent) {
+                int humidity, int watering, Multiplying multiplying, boolean fruitPresent) {
 
         super(plantId, name, plantingDate, soil, country, leafColor, stemColor,
                 mediumSize, temperature, humidity, watering, multiplying);
-        this.isFruitPresent = isFruitPresent;
+        isFruitPresent = fruitPresent;
     }
 
     public boolean isFruitPresent() {
