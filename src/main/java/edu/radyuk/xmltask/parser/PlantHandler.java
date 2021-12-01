@@ -51,9 +51,9 @@ public class PlantHandler extends DefaultHandler {
                 currentPlant.setPicture(Plant.DEFAULT_PICTURE);
             } else {
                 int idAttributeIndex = attributes.getLocalName(0).equals(PlantTag.ID.toString()) ? 0 : 1;
-                int websiteAttributeIndex = 1 - idAttributeIndex;
+                int pictureAttributeIndex = 1 - idAttributeIndex;
                 currentPlant.setPlantId(attributes.getValue(idAttributeIndex));
-                currentPlant.setPicture(attributes.getValue(websiteAttributeIndex));
+                currentPlant.setPicture(attributes.getValue(pictureAttributeIndex));
             }
         } else {
             PlantTag temp = PlantTag.valueOf(name);
