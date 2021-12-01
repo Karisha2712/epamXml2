@@ -1,10 +1,6 @@
 package edu.radyuk.xmltask.parser;
 
-import edu.radyuk.xmltask.entity.BushPlant;
-import edu.radyuk.xmltask.entity.GrassPlant;
-import edu.radyuk.xmltask.entity.Plant;
-import edu.radyuk.xmltask.entity.TreePlant;
-import edu.radyuk.xmltask.entity.PlantTag;
+import edu.radyuk.xmltask.entity.*;
 import edu.radyuk.xmltask.entity.type.*;
 import edu.radyuk.xmltask.exception.PlantException;
 import org.apache.logging.log4j.Level;
@@ -71,7 +67,7 @@ public class PlantDomBuilder implements PlantBuilder {
         logger.log(Level.INFO, "Plants were created successfully");
     }
 
-    private static Plant buildPlant(Element plantElement, PlantType plantType) throws PlantException {
+    private Plant buildPlant(Element plantElement, PlantType plantType) throws PlantException {
         Plant plant;
         switch (plantType) {
             case TREE -> {
@@ -127,7 +123,7 @@ public class PlantDomBuilder implements PlantBuilder {
         return plant;
     }
 
-    private static String getElementTextContent(Element element, String tagName) {
+    private String getElementTextContent(Element element, String tagName) {
         NodeList nList = element.getElementsByTagName(tagName);
         Node node = nList.item(0);
         return node.getTextContent();
