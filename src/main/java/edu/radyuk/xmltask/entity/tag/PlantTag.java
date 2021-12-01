@@ -1,6 +1,9 @@
 package edu.radyuk.xmltask.entity.tag;
 
 public enum PlantTag {
+    TREE,
+    BUSH,
+    GRASS,
     NAME,
     PLANTING_DATE,
     SOIL,

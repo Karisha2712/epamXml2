@@ -4,9 +4,9 @@ import edu.radyuk.xmltask.entity.BushPlant;
 import edu.radyuk.xmltask.entity.GrassPlant;
 import edu.radyuk.xmltask.entity.Plant;
 import edu.radyuk.xmltask.entity.TreePlant;
+import edu.radyuk.xmltask.entity.tag.PlantTag;
 import edu.radyuk.xmltask.entity.type.*;
 import edu.radyuk.xmltask.exception.PlantException;
-import edu.radyuk.xmltask.entity.tag.PlantTag;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -27,10 +27,11 @@ import java.util.Locale;
 
 public class PlantDomBuilder implements PlantBuilder {
     private static final Logger logger = LogManager.getLogger();
-    private final List<Plant> plants = new ArrayList<>();
+    private final List<Plant> plants;
     private final DocumentBuilder documentBuilder;
 
     public PlantDomBuilder() throws PlantException {
+        plants = new ArrayList<>();
         DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         try {
             documentBuilder = documentBuilderFactory.newDocumentBuilder();
@@ -88,9 +89,8 @@ public class PlantDomBuilder implements PlantBuilder {
                 ((GrassPlant) plant).setFlowerPresent(Boolean
                         .parseBoolean(getElementTextContent(plantElement, PlantTag.FLOWER_PRESENCE.toString())));
             }
-            default -> {
-                throw new PlantException("Invalid plant type");
-            }
+            default -> throw new PlantException("Invalid plant type");
+
         }
         String picture = plantElement.getAttribute(PlantTag.PICTURE.toString());
         if (picture.isBlank()) {
