@@ -4,7 +4,7 @@ import edu.radyuk.xmltask.entity.BushPlant;
 import edu.radyuk.xmltask.entity.GrassPlant;
 import edu.radyuk.xmltask.entity.Plant;
 import edu.radyuk.xmltask.entity.TreePlant;
-import edu.radyuk.xmltask.entity.tag.PlantTag;
+import edu.radyuk.xmltask.entity.PlantTag;
 import edu.radyuk.xmltask.entity.type.*;
 import edu.radyuk.xmltask.exception.PlantException;
 import org.apache.logging.log4j.Level;

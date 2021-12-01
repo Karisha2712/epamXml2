@@ -1,4 +1,4 @@
-package edu.radyuk.xmltask.entity.tag;
+package edu.radyuk.xmltask.entity;
 
 public enum PlantTag {
     FLOWERS,
