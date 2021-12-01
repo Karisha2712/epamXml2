@@ -23,13 +23,13 @@ public abstract class Plant {
     private int watering;
     private Multiplying multiplying;
 
-    public Plant() {
+    protected Plant() {
     }
 
-    public Plant(String plantId, String name, LocalDateTime plantingDate,
-                 Soil soil, Country country, Color leafColor,
-                 Color stemColor, int mediumSize, int temperature,
-                 int humidity, int watering, Multiplying multiplying) {
+    protected Plant(String plantId, String name, LocalDateTime plantingDate,
+                    Soil soil, Country country, Color leafColor,
+                    Color stemColor, int mediumSize, int temperature,
+                    int humidity, int watering, Multiplying multiplying) {
         this.plantId = plantId;
         this.name = name;
         this.plantingDate = plantingDate;
