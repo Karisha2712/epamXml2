@@ -29,6 +29,7 @@ public class PlantSaxBuilder implements PlantBuilder {
             XMLReader reader = parser.getXMLReader();
             var handler = new PlantHandler();
             reader.setContentHandler(handler);
+            reader.setErrorHandler(new PlantErrorHandler());
             reader.parse(filePath);
             plants = handler.getPlants();
         } catch (EnumConstantNotPresentException | SAXException e) {
