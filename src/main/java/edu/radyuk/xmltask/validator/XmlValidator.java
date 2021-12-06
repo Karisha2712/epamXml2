@@ -20,19 +20,18 @@ public class XmlValidator {
     }
 
     public boolean isXmlFileValid(String xmlFilepath, String xsdFilepath) {
-        boolean result = true;
+        boolean result = false;
         SchemaFactory factory =
                 SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
         try {
             Schema schema = factory.newSchema(new File(xsdFilepath));
             Validator validator = schema.newValidator();
             validator.validate(new StreamSource(new File(xmlFilepath)));
+            result = true;
         } catch (IOException e) {
             logger.log(Level.ERROR, "Error while reading file: {}", xmlFilepath, e);
-            result = false;
         } catch (SAXException e) {
             logger.log(Level.ERROR, "File {} is not valid", xmlFilepath, e);
-            result = false;
         }
         return result;
     }
