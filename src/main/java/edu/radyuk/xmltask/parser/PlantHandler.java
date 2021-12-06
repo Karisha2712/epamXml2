@@ -17,7 +17,7 @@ public class PlantHandler extends DefaultHandler {
     private final List<Plant> plants;
     private Plant currentPlant;
     private PlantTag currentTag;
-    private EnumSet<PlantTag> withText;
+    private final EnumSet<PlantTag> withText;
 
     public PlantHandler() {
         plants = new ArrayList<>();

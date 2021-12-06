@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flowers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.example.com/greenhouse"
+         xsi:schemaLocation="http://www.example.com/greenhouse greenhouse.xsd">
+
+    <tree id="id1" picture="fir.png">
+        <name>fir</name>
+        <planting-date>2003-12-03T06:00:00</planting-date>
+        <soil>peat</soil>
+        <country>Canada</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>130</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>18</temperature>
+            <humidity>40</humidity>
+            <watering>30</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <fruit-presence>false</fruit-presence>
+    </tree>
+
+    <tree id="id2">
+        <name>apple tree</name>
+        <planting-date>2010-10-13T06:00:00</planting-date>
+        <soil>podzolic</soil>
+        <country>Russia</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>120</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>18</temperature>
+            <humidity>50</humidity>
+            <watering>40</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <fruit-presence>true</fruit-presence>
+    </tree>
+
+    <tree id="id3">
+        <name>plum tree</name>
+        <planting-date>2007-04-18T06:00:00</planting-date>
+        <soil>podzolic</soil>
+        <country>Russia</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>70</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>24</temperature>
+            <humidity>45</humidity>
+            <watering>30</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <fruit-presence>true</fruit-presence>
+    </tree>
+
+    <tree id="id4" picture="cherry.png">
+        <name>cherry tree</name>
+        <planting-date>2000-11-07T06:00:00</planting-date>
+        <soil>podzolic</soil>
+        <country>USA</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>170</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>23</temperature>
+            <humidity>70</humidity>
+            <watering>35</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <fruit-presence>true</fruit-presence>
+    </tree>
+
+    <tree id="id5">
+        <name>pine tree</name>
+        <planting-date>2000-02-17T06:00:00</planting-date>
+        <soil>peat</soil>
+        <country>Russia</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>300</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>20</temperature>
+            <humidity>30</humidity>
+            <watering>20</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <fruit-presence>false</fruit-presence>
+    </tree>
+
+    <bush id="id6">
+        <name>thuja</name>
+        <planting-date>2018-05-04T06:00:00</planting-date>
+        <soil>podzolic</soil>
+        <country>USA</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>60</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>20</temperature>
+            <humidity>20</humidity>
+            <watering>20</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <need-for-pruning>true</need-for-pruning>
+    </bush>
+
+    <bush id="id7">
+        <name>gooseberry</name>
+        <planting-date>2009-04-02T06:00:00</planting-date>
+        <soil>ground</soil>
+        <country>Russia</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>70</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>25</temperature>
+            <humidity>30</humidity>
+            <watering>10</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <need-for-pruning>false</need-for-pruning>
+    </bush>
+
+    <bush id="id8" picture="hydrangea.png">
+        <name>hydrangea</name>
+        <planting-date>2005-02-14T06:00:00</planting-date>
+        <soil>peat</soil>
+        <country>USA</country>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>200</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>30</temperature>
+            <humidity>40</humidity>
+            <watering>15</watering>
+        </growing-tips>
+        <multiplying>cutting</multiplying>
+        <need-for-pruning>false</need-for-pruning>
+    </bush>
+
+    <bush id="id9">
+        <name>spirea</name>
+        <planting-date>2020-08-30T06:00:00</planting-date>
+        <soil>peat</soil>
+        <country>Australia</country>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>50</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>25</temperature>
+            <humidity>60</humidity>
+            <watering>20</watering>
+        </growing-tips>
+        <multiplying>bulb</multiplying>
+        <need-for-pruning>true</need-for-pruning>
+    </bush>
+
+    <bush id="id10">
+        <name>juniper</name>
+        <planting-date>2011-05-24T06:00:00</planting-date>
+        <soil>ground</soil>
+        <country>Canada</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>120</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>16</temperature>
+            <humidity>30</humidity>
+            <watering>10</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <need-for-pruning>true</need-for-pruning>
+    </bush>
+
+    <grass id="id11" picture="rose.png">
+        <name>rose</name>
+        <planting-date>2020-08-31T06:00:00</planting-date>
+        <soil>podzolic</soil>
+        <country>Australia</country>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>30</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>22</temperature>
+            <humidity>70</humidity>
+            <watering>30</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <flower-presence>true</flower-presence>
+    </grass>
+
+    <grass id="id12">
+        <name>tulip</name>
+        <planting-date>2021-05-24T06:00:00</planting-date>
+        <soil>ground</soil>
+        <country>Russia</country>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>20</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>24</temperature>
+            <humidity>60</humidity>
+            <watering>20</watering>
+        </growing-tips>
+        <multiplying>bulb</multiplying>
+        <flower-presence>true</flower-presence>
+    </grass>
+
+    <grass id="id13" picture="pion.png">
+        <name>pion</name>
+        <planting-date>2013-10-28T06:00:00</planting-date>
+        <soil>peat</soil>
+        <country>Russia</country>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>80</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>24</temperature>
+            <humidity>80</humidity>
+            <watering>40</watering>
+        </growing-tips>
+        <multiplying>bulb</multiplying>
+        <flower-presence>true</flower-presence>
+    </grass>
+
+    <grass id="id14" picture="pansy.png">
+        <name>pansy</name>
+        <planting-date>2004-07-11T06:00:00</planting-date>
+        <soil>peat</soil>
+        <country>Russia</country>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <medium-size>7</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>20</temperature>
+            <humidity>40</humidity>
+            <watering>15</watering>
+        </growing-tips>
+        <multiplying>seed</multiplying>
+        <flower-presence>true</flower-presence>
+    </grass>
+
+    <grass id="id15">
+        <name>bamboo</name>
+        <planting-date>2016-03-17T06:00:00</planting-date>
+        <soil>podzolic</soil>
+        <country>Australia</country>
+        <visual-parameters>
+            <stem-color>brown</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>400</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>27</temperature>
+            <humidity>40</humidity>
+            <watering>20</watering>
+        </growing-tips>
+        <multiplying>cutting</multiplying>
+        <flower-presence>false</flower-presence>
+    </grass>
+
+    <grass id="id16">
+        <name>lily</name>
+        <planting-date>2014-01-12T06:00:00</planting-date>
+        <soil>ground</soil>
+        <country>Canada</country>
+        <visual-parameters>
+            <stem-color>green</stem-color>
+            <leaf-color>green</leaf-color>
+            <medium-size>80</medium-size>
+        </visual-parameters>
+        <growing-tips>
+            <temperature>20</temperature>
+            <humidity>20</humidity>
+            <watering>20</watering>
+        </growing-tips>
+        <multiplying>bulb</multiplying>
+        <flower-presence>true</flower-presence>
+    </grass>
+
+</flowers>
