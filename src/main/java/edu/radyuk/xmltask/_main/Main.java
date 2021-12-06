@@ -2,7 +2,10 @@ package edu.radyuk.xmltask._main;
 
 import edu.radyuk.xmltask.entity.Plant;
 import edu.radyuk.xmltask.exception.PlantException;
-import edu.radyuk.xmltask.parser.*;
+import edu.radyuk.xmltask.parser.BuilderType;
+import edu.radyuk.xmltask.parser.PlantBuilder;
+import edu.radyuk.xmltask.parser.PlantBuilderFactory;
+import edu.radyuk.xmltask.validator.XmlValidator;
 import org.apache.logging.log4j.Level;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,20 +26,31 @@ public class Main {
         File xsdFile = new File(xsdFileUrl.getFile());
         String xmlFilepath = xmlFile.getAbsolutePath();
         String xsdFilepath = xsdFile.getAbsolutePath();
-        try {
-            BuilderManager builderManager = new BuilderManager();
-            PlantBuilder plantBuilder = new PlantDomBuilder();
-            List<Plant> domPlants = builderManager.parseXml(xmlFilepath, xsdFilepath, plantBuilder);
-            plantBuilder = new PlantSaxBuilder();
-            List<Plant> saxPlants = builderManager.parseXml(xmlFilepath, xsdFilepath, plantBuilder);
-            plantBuilder = new PlantStaxBuilder();
-            List<Plant> staxPlants = builderManager.parseXml(xmlFilepath, xsdFilepath, plantBuilder);
-            System.out.println(domPlants);
-            System.out.println(saxPlants);
-            System.out.println(staxPlants);
-        } catch (PlantException e) {
-            logger.log(Level.ERROR, e);
-        }
+        XmlValidator validator = new XmlValidator();
+        if (validator.isXmlFileValid(xmlFilepath, xsdFilepath)) {
+            try {
+                PlantBuilderFactory plantBuilderFactory = PlantBuilderFactory.getInstance();
+                PlantBuilder builder;
 
+                builder = plantBuilderFactory.getPlantBuilder(BuilderType.DOM);
+                builder.buildPlants(xmlFilepath);
+                List<Plant> domPlants = builder.getPlants();
+
+                builder = plantBuilderFactory.getPlantBuilder(BuilderType.SAX);
+                builder.buildPlants(xmlFilepath);
+                List<Plant> saxPlants = builder.getPlants();
+
+                builder = plantBuilderFactory.getPlantBuilder(BuilderType.STAX);
+                builder.buildPlants(xmlFilepath);
+                List<Plant> staxPlants = builder.getPlants();
+
+                System.out.println(domPlants);
+                System.out.println(saxPlants);
+                System.out.println(staxPlants);
+
+            } catch (PlantException e) {
+                logger.log(Level.ERROR, e);
+            }
+        }
     }
 }
