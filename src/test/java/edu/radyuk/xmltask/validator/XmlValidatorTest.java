@@ -10,10 +10,10 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 class XmlValidatorTest {
     @Test
     void ifXmlValidatorReturnsTrue() {
-        URL XmlFileUrl = XmlValidatorTest.class.getClassLoader().getResource("files/greenhouse.xml");
-        URL XsdFileUrl = XmlValidatorTest.class.getClassLoader().getResource("files/greenhouse.xsd");
-        File xmlFile = new File(XmlFileUrl.getFile());
-        File xsdFile = new File(XsdFileUrl.getFile());
+        URL xmlFileUrl = XmlValidatorTest.class.getClassLoader().getResource("files/greenhouse.xml");
+        URL xsdFileUrl = XmlValidatorTest.class.getClassLoader().getResource("files/greenhouse.xsd");
+        File xmlFile = new File(xmlFileUrl.getFile());
+        File xsdFile = new File(xsdFileUrl.getFile());
         String xmlFilepath = xmlFile.getAbsolutePath();
         String xsdFilepath = xsdFile.getAbsolutePath();
         XmlValidator xmlValidator = new XmlValidator();

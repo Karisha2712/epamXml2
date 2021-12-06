@@ -1,10 +1,6 @@
 package edu.radyuk.xmltask.parser;
 
-import edu.radyuk.xmltask.entity.BushPlant;
-import edu.radyuk.xmltask.entity.GrassPlant;
-import edu.radyuk.xmltask.entity.Plant;
-import edu.radyuk.xmltask.entity.TreePlant;
-import edu.radyuk.xmltask.entity.PlantTag;
+import edu.radyuk.xmltask.entity.*;
 import edu.radyuk.xmltask.entity.type.*;
 import org.xml.sax.Attributes;
 import org.xml.sax.helpers.DefaultHandler;

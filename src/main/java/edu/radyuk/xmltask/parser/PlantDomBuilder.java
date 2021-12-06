@@ -50,6 +50,7 @@ public class PlantDomBuilder implements PlantBuilder {
         } catch (IOException e) {
             throw new PlantException("File %s can't be read".formatted(filePath), e);
         }
+        logger.log(Level.INFO, "Plants were created successfully");
     }
 
     @Override
@@ -64,7 +65,6 @@ public class PlantDomBuilder implements PlantBuilder {
             Plant plant = buildPlant(plantElement, plantType);
             plants.add(plant);
         }
-        logger.log(Level.INFO, "Plants were created successfully");
     }
 
     private Plant buildPlant(Element plantElement, PlantType plantType) throws PlantException {
